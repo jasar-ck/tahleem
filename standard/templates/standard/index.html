@@ -1,0 +1,8 @@
+{% extends "standard/layout.html" %}
+{% block body %}
+<h1>Here List All the classes!!!</h1>
+{% for standard in standards %}
+<h6> {{ standard }} </h6>
+{% endfor %}
+<a href="{% url 'standard:add' %}">Add a New Clas</a>
+{% endblock %}

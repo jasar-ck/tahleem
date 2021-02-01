@@ -1,0 +1,11 @@
+{% extends "institute/layout.html" %}
+
+    {% block body %}
+    <h1>Add Institution</h1>
+    <form method="post" action="{% url 'institute:add' %}">
+      {% csrf_token %}
+        {{ form }}
+         <input type="submit" />
+    </form>
+    <a href="{% url 'institute:index' %}">Institution</a>
+    {% endblock %}

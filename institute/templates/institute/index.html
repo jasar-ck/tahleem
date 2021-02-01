@@ -1,0 +1,15 @@
+{% extends "institute/layout.html" %}
+
+    {% block body %}
+      <h1>Welecome to {{inst_name}}</h1>
+      <h3> Address : </h3>
+      <h4> Contact Info </h4>
+      <h4> Institution : </h4>
+      <ul>
+      {% for school in schools %}
+        <li> {{ school }}</li>
+      {% endfor %}
+    </ul>
+
+      <a href="{% url 'institute:add' %}">Add Institution</a>
+    {% endblock %}

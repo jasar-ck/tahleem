@@ -1,0 +1,10 @@
+{% extends "standard/layout.html" %}
+{% block body %}
+<form method="POST" action="{% url 'standard:add' %}">
+  {% csrf_token %}
+  {{ form }}
+<input type="submit" value="Add" />
+</form>
+
+<a href="{% url 'standard:index' %}">View All Classes</a>
+{% endblock %}
